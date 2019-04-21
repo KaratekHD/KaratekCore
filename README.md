@@ -23,4 +23,4 @@ The following listener are working at the moment:
 
 ## Dependencies
 * PermissionsEX : needed for Ranks
-* sTabliist: needed for Ranks (Example Comfig is in a seperate branche)
+* sTabliist: needed for Ranks (Example Comfig is in this [Gist](https://gist.github.com/KaratekHD/65ae1c9e6ed668e3ea4a66ce21a78a09) )
