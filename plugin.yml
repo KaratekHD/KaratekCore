@@ -1,15 +1,12 @@
 name: KaratekCore
 author: Karatek_HD
-version: 2.1
+version: 0.2.2
 main: com.karatek.core.main.Main
 commands:
    test:
    chatclear:
    cc:
    kopf:
-   cmdspy:
-   rundruf:
-   bc:
    broadcast:
    globalmute:
    kvanish:
