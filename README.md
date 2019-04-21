@@ -22,5 +22,5 @@ The following listener are working at the moment:
 * ScoreBoard (PlayerJoinEvent): Displays a ScoreBoard
 
 ## Dependencies
-* PermissionsEX : needed for Ranks
-* sTabliist: needed for Ranks (Example Comfig is in this [Gist](https://gist.github.com/KaratekHD/65ae1c9e6ed668e3ea4a66ce21a78a09) )
+* [PermissionsEX](https://github.com/PEXPlugins/PermissionsEx/) : needed for Ranks
+* [sTabliist](https://github.com/DevJul1an/sTablist): needed for Ranks (Example Comfig is in this [Gist](https://gist.github.com/KaratekHD/65ae1c9e6ed668e3ea4a66ce21a78a09) )
