@@ -12,6 +12,7 @@ At the moment, the following Commands are working:
 * `/kv`: Vanishes you -> Only for development purposes!
 * `/test`: prints "Hallo Welt!"
 * `/server`: emulates the BungeeCord command /server.
+* `/rank <Player> <Rank>` : Changes the Player Rank
 
 ## Listener
 The following listener are working at the moment:
@@ -39,10 +40,33 @@ The following ChatActions are possible:
 * karatek.adminchat -> needed for writing in green
 * karatek.teamsend -> needed for writing into TeamChat
 * karatek.teamsee -> getting messages in the TeamChat
+* karatek.rank -> needed for `/rank`
+* karatek.silentjoin -> users with this Permission don't have a join message and are automatically vanished.
+
+## Ranks
+These Ranks are Integreated:
+* Owner
+* Admin
+* Developer
+* Moderator
+* Supporter
+* Builder
+* Player / Spieler
+* VIP
+* Premium
+* Ultra
+* YouTuber
+* YouTuber+
+* TeamFriend
+* TeamFriendPlus
+* Tester
+
+More informations about rank are coming soon in the wiki.
 
 ## Dependencies
 * [PermissionsEX](https://github.com/PEXPlugins/PermissionsEx/) : needed for Ranks
 * [sTabliist](https://github.com/DevJul1an/sTablist): needed for Ranks (Example Comfig is in this [Gist](https://gist.github.com/KaratekHD/65ae1c9e6ed668e3ea4a66ce21a78a09) )
+* [EssenitalsX](https://github.com/EssentialsX/Essentials) : needed for autovanish
 
 ## Installation Guide
 1. Install Spigot 1.8.x

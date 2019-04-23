@@ -32,19 +32,23 @@ public class ScoreBoard implements Listener {
         Score Rang = o.getScore("> §3§lRang:");
         if(PermissionsEx.getUser(p).inGroup("Admin")) {
             Score getRang = o.getScore("§cAdmin");
-            getRang.setScore(9);
+            getRang.setScore(10);
         }
         if(PermissionsEx.getUser(p).inGroup("Owner")) {
             Score getRang = o.getScore("§4§lOwner");
-            getRang.setScore(9);
+            getRang.setScore(10);
         }
         if(PermissionsEx.getUser(p).inGroup("Developer")) {
             Score getRang = o.getScore("§b§lDeveloper");
-            getRang.setScore(9);
+            getRang.setScore(10);
         }
         if(PermissionsEx.getUser(p).inGroup("Moderator")) {
             Score getRang = o.getScore("§2Moderator");
-            getRang.setScore(9);
+            getRang.setScore(10);
+        }
+        if(PermissionsEx.getUser(p).inGroup("Supporter")) {
+            Score getRang = o.getScore("§aSupporter");
+            getRang.setScore(10);
         }
         if(PermissionsEx.getUser(p).inGroup("Supporter")) {
             Score getRang = o.getScore("§aSupporter");
@@ -52,11 +56,11 @@ public class ScoreBoard implements Listener {
         }
         if(PermissionsEx.getUser(p).inGroup("Friend")) {
             Score getRang = o.getScore("§dTeamFreund");
-            getRang.setScore(9);
+            getRang.setScore(10);
         }
         if(PermissionsEx.getUser(p).inGroup("FriendPlus")) {
             Score getRang = o.getScore("§dTeamFreund+");
-            getRang.setScore(9);
+            getRang.setScore(10);
         }
         if(PermissionsEx.getUser(p).inGroup("YouTuber+")) {
             Score getRang = o.getScore("§5YouTuber§4+");
@@ -64,11 +68,11 @@ public class ScoreBoard implements Listener {
         }
         if(PermissionsEx.getUser(p).inGroup("default")) {
             Score getRang = o.getScore("§7Spieler");
-            getRang.setScore(9);
+            getRang.setScore(10);
         }
         if(PermissionsEx.getUser(p).inGroup("Builder")) {
             Score getRang = o.getScore("§eBuilder");
-            getRang.setScore(9);
+            getRang.setScore(10);
         }
         Score Platzhalter0 = o.getScore("§0");
         Score Platzhalter1 = o.getScore("§1");
@@ -84,24 +88,24 @@ public class ScoreBoard implements Listener {
         
         // Punkte für die Scores
 
-        Platzhalter0.setScore(11);
-        Rang.setScore(10);
-        Platzhalter1.setScore(8);
-        Name.setScore(7);
-        getName.setScore(6);
-        Platzhalter2.setScore(5);
-        Kills.setScore(4);
-        getKillsScore.setScore(3);
-        Platzhalter3.setScore(2);
-        Deaths.setScore(1);
-        getDeathsScore.setScore(0);
-        Platzhalter4.setScore(-1);
+        Platzhalter0.setScore(12);
+        Rang.setScore(11);
+        Platzhalter1.setScore(9);
+        Name.setScore(8);
+        getName.setScore(7);
+        Platzhalter2.setScore(6);
+        Kills.setScore(5);
+        getKillsScore.setScore(4);
+        Platzhalter3.setScore(3);
+        Deaths.setScore(2);
+        getDeathsScore.setScore(1);
+        Platzhalter4.setScore(0);
 
         p.setScoreboard(s);
     }
     
     @EventHandler
-    public void onJoin(PlayerJoinEvent j) {
-        setBoard(j.getPlayer());
+    public void onJoin(PlayerJoinEvent e) {
+        setBoard(e.getPlayer());
     }
 }

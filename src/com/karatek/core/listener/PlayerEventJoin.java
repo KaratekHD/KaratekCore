@@ -17,8 +17,11 @@ public class PlayerEventJoin implements Listener {
 	@EventHandler
 	public void onJoin(PlayerJoinEvent e) {
 		Player p = e.getPlayer();
-		String name = p.getDisplayName();
-		e.setJoinMessage("§8[§a+§8] §8" + name);
+		if(p.hasPermission("karatek.silentjoin")) {
+			e.setJoinMessage("");
+		} else {
+			e.setJoinMessage("§8[§a+§8] §8" + p.getDisplayName());
+		}
 		p.sendMessage(Main.loginprefix + " Deine Daten werden verarbeitet");
 		PermissionUser pexuser = PermissionsEx.getUser(p);
 		if(pexuser.inGroup("default")) {
@@ -49,6 +52,10 @@ public class PlayerEventJoin implements Listener {
 		}
 		if(pexuser.inGroup("FriendPlus")) {
 			p.sendMessage(Main.loginprefix + " Dein Rang ist jetzt §5TeamFreund+§r.");
+		}
+		if(p.hasPermission("karatek.silentjoin")) {
+			p.sendMessage(Main.loginprefix + " Du bist automatisch gevanisht.");
+			p.performCommand("v");
 		}
 	    p.sendMessage(Main.loginprefix + " Daten wurden verarbeitet.");
 	    World w = p.getWorld();
