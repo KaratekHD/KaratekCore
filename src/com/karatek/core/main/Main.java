@@ -6,6 +6,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import com.karatek.core.commands.CommandTest;
 import com.karatek.core.commands.Command_ChatClear;
+import com.karatek.core.commands.Command_Crash;
 import com.karatek.core.commands.Command_DevInfo;
 import com.karatek.core.commands.Command_GlobalMute;
 import com.karatek.core.commands.Command_KVanish;
@@ -62,6 +63,7 @@ public class Main extends JavaPlugin {
 		this.getCommand("devinfo").setExecutor(new Command_DevInfo());
 		this.getCommand("server").setExecutor(new Command_Server());
 		this.getCommand("rank").setExecutor(new Command_Rank());
+		this.getCommand("crash").setExecutor(new Command_Crash());
 	}
 	
 	

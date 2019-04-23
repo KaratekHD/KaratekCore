@@ -15,5 +15,6 @@ commands:
    devinfo:
    server:
    rank:
+   crash:
 
 
