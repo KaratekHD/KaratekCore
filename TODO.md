@@ -9,4 +9,4 @@
 * InventoryListeners
 
 ## Stuff
- Nothing yet
+* Customiziation and configuration options
