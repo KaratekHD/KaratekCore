@@ -13,7 +13,6 @@ import com.karatek.core.commands.Command_KVanish;
 import com.karatek.core.commands.Command_Kopf;
 import com.karatek.core.commands.Command_Rank;
 import com.karatek.core.commands.Command_Server;
-import com.karatek.core.commands.Command_Sync;
 import com.karatek.core.listener.Broadcast_Listener;
 import com.karatek.core.listener.GlobalMuteListener;
 import com.karatek.core.listener.KickEvent;
@@ -59,7 +58,6 @@ public class Main extends JavaPlugin {
 		this.getCommand("globalmute").setExecutor(new Command_GlobalMute());
 		this.getCommand("kvanish").setExecutor(new Command_KVanish());
 		this.getCommand("kv").setExecutor(new Command_KVanish());
-		this.getCommand("sync").setExecutor(new Command_Sync());
 		this.getCommand("devinfo").setExecutor(new Command_DevInfo());
 		this.getCommand("server").setExecutor(new Command_Server());
 		this.getCommand("rank").setExecutor(new Command_Rank());
