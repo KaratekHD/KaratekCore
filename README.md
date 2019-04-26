@@ -67,11 +67,11 @@ These Ranks are Integreated:
 * TeamFriendPlus
 * Tester
 
-More informations about rank are coming soon in the wiki.
+More informations about ranks are coming soon in the wiki.
 
 ## Dependencies
 * [PermissionsEX](https://github.com/PEXPlugins/PermissionsEx/) : needed for Ranks
-* [sTabliist](https://github.com/DevJul1an/sTablist): needed for Ranks (Example Comfig is in this [Gist](https://gist.github.com/KaratekHD/65ae1c9e6ed668e3ea4a66ce21a78a09) )
+* [sTabliist](https://github.com/DevJul1an/sTablist): needed for Ranks (Example Config is in this [Gist](https://gist.github.com/KaratekHD/65ae1c9e6ed668e3ea4a66ce21a78a09) )
 * [EssenitalsX](https://github.com/EssentialsX/Essentials) : needed for autovanish
 
 ## Installation Guide
