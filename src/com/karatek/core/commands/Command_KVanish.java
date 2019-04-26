@@ -1,5 +1,17 @@
 package com.karatek.core.commands;
 
+/*
+ * Command_KVanish
+ * 
+ * Version 0.2.2 RC 2
+ * 
+ * Last Change: 0.2.2 RC 2
+ * 
+ * Copyright Karatek_HD
+ * 
+ * License free
+ */
+
 import java.util.ArrayList;
 
 import org.bukkit.Bukkit;

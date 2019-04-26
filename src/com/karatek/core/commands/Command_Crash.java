@@ -1,6 +1,16 @@
 package com.karatek.core.commands;
 
-
+/*
+ * Command_Crash
+ * 
+ * Version 0.2.2 RC 2
+ * 
+ * Last Change: 0.2.2 RC 2
+ * 
+ * Copyright Karatek_HD
+ * 
+ * License free
+ */
 
 import java.util.Collections;
 
@@ -10,7 +20,6 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.craftbukkit.v1_8_R1.entity.CraftPlayer;
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.Inventory;
 
 import com.karatek.core.main.Main;
 
@@ -22,8 +31,6 @@ import net.minecraft.server.v1_8_R1.Vec3D;
 
 public class Command_Crash implements CommandExecutor {
 	
-	
-
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		

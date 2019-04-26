@@ -1,5 +1,17 @@
 package com.karatek.core.commands;
 
+/*
+ * Command_ChatClear
+ * 
+ * Version 0.2.2 RC 2
+ * 
+ * Last Change: 0.2.2 RC 2
+ * 
+ * Copyright Karatek_HD
+ * 
+ * License free
+ */
+
 import org.bukkit.Sound;
 import org.bukkit.World;
 import org.bukkit.command.Command;

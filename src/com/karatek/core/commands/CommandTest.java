@@ -1,5 +1,17 @@
 package com.karatek.core.commands;
 
+/*
+ * CommandTest
+ * 
+ * Version 0.2.2 RC 2
+ * 
+ * Last Change: 0.2.2 RC 2
+ * 
+ * Copyright Karatek_HD
+ * 
+ * License free
+ */
+
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
