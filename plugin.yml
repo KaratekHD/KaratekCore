@@ -4,7 +4,6 @@ version: 0.2.2 RC 2
 main: com.karatek.core.main.Main
 description: Some essential stuff for your Server
 website: https://github.com/KaratekHD
-database: false
 softdepend: [PermissionsEx, Essentials]
 commands:
    test:
