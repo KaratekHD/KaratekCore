@@ -1,7 +1,7 @@
 package com.karatek.core.commands;
 
 /*
- * Command_Version
+ * CommandTest
  *
  * Version 0.2.2 RC 2
  *
@@ -12,25 +12,29 @@ package com.karatek.core.commands;
  * License free
  */
 
-import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+
 import com.karatek.core.main.Main;
 
-public class Command_Version implements CommandExecutor {
+public class Command_Test implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-        if(!(sender instanceof Player)) {
-            Bukkit.getConsoleSender().sendMessage("This Server is running KaratekCore " + Main.version + ".");
-            return true;
-        } else {
+        if (sender instanceof Player) {
             Player p = (Player) sender;
-            p.sendMessage("This Server is running KaratekCore §a" + Main.version + "§r.");
+
+            p.sendMessage(Main.pre + " Hallo Welt!");
+
+
         }
-        return false;
+
+        // If the player (or console) uses our command correct, we can return true
+        return true;
     }
 
+
 }
+

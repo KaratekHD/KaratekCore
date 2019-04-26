@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="KaratekCore">
+    <output-path>$PROJECT_DIR$/../../mcserver/plugins</output-path>
+    <root id="archive" name="KaratekCore.jar">
+      <element id="module-output" name="KaratekCore" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/plugin.yml" />
+    </root>
+  </artifact>
+</component>
