@@ -1,7 +1,7 @@
 package com.karatek.core.listener;
 
 /*
- * PlayerEventJoin
+ * JoinPlayerEvent
  *
  * Version 0.2.2 RC 2
  *
@@ -24,7 +24,7 @@ import ru.tehkode.permissions.PermissionUser;
 import ru.tehkode.permissions.bukkit.PermissionsEx;
 
 
-public class PlayerEventJoin implements Listener {
+public class JoinPlayerEvent implements Listener {
 
     @EventHandler
     public void onJoin(PlayerJoinEvent e) {

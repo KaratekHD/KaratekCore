@@ -1,7 +1,7 @@
 package com.karatek.core.listener;
 
 /*
- * QuitListener
+ * QuitPlayerEvent
  *
  * Version 0.2.2 RC 2
  *
@@ -17,7 +17,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerQuitEvent;
 
-public class QuitListener implements Listener {
+public class QuitPlayerEvent implements Listener {
 
     @EventHandler
     public void onQuit (PlayerQuitEvent e) {
