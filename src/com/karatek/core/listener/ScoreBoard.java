@@ -1,5 +1,17 @@
 package com.karatek.core.listener;
 
+/*
+ * ScoreBoard
+ *
+ * Version 0.2.2 RC 2
+ *
+ * Last Change: 0.2.2 RC 2
+ *
+ * Copyright Karatek_HD
+ *
+ * License free
+ */
+
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -21,7 +33,7 @@ public class ScoreBoard implements Listener {
         Scoreboard s = Bukkit.getScoreboardManager().getNewScoreboard();
         Objective o = s.registerNewObjective("aaa", "bbb");
         int players = Bukkit.getServer().getOnlinePlayers().size();
-        
+
         // Einstellungen des Scoreboards
 
         o.setDisplayName("§6§lGamelMC§r.§6§lde");
@@ -85,7 +97,7 @@ public class ScoreBoard implements Listener {
         Score Deaths = o.getScore(">§3§l Spieler:");
         Score getDeathsScore = o.getScore(" §r" + players + "/500");
         Score Platzhalter4 = o.getScore("§4");
-        
+
         // Punkte für die Scores
 
         Platzhalter0.setScore(12);
@@ -103,7 +115,7 @@ public class ScoreBoard implements Listener {
 
         p.setScoreboard(s);
     }
-    
+
     @EventHandler
     public void onJoin(PlayerJoinEvent e) {
         setBoard(e.getPlayer());

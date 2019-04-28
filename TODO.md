@@ -2,7 +2,6 @@
 
 ## Commands
 * `/troll`
-* `/crash`
 * `/rand`
 
 ## Listeners

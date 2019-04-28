@@ -1,0 +1,16 @@
+  name: KaratekCore
+  main: com.karatek.core.main.Main
+  version: 0.2.2 RC2
+  commands:
+     test:
+     chatclear:
+     cc:
+     crash:
+     globalmute:
+     kopf:
+     kv:
+     kvanish:
+     rank:
+     server:
+     kversion:
+     troll:
