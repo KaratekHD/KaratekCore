@@ -1,9 +1,7 @@
 # KaratekCore
-![TESTING](https://img.shields.io/badge/TESTING%20VERSION-UNSTABLE-critical.svg?style=flat-square&logo=java)
+
 ![Version](https://img.shields.io/github/release-pre/KaratekHD/KaratekCore.svg?style=flat-square)
 ![Spigot](https://img.shields.io/badge/Plugin-Spigot-yellow.svg?style=flat-square)
-
-WARNING! THIS IS THE INSTABLE PART AND ONLY FOR TESTING PURPOSES!
 
 KaratekCore is a Spigot Plugin, designed to run on the GamelMC Minecraft Server.
 At the moment, there isn't any way to configure it, but I'm working on it.
@@ -21,11 +19,11 @@ At the moment, the following commands are working:
 
 ## Listener
 The following listener are working at the moment:
-* ChatListener (AsyncPlayerChatEvent) : Changes the chat layout and adds a teamchat
-* GlobalMuteListener (AsyncPlayerChatEvent) : Prevents players form writing while the chat is disabled via /globalmute.
+* ChatListener (AsyncPlayerChatEvent) : Changes the chat layout and adds a teamchat. It also prevents  players form writing while the chat is disabled via /globalmute.
 * KickEvent (PlayerKickEvent), PlayerEventJoin(PlayerJoinEvent) and PlayerQuitEvent (PlayerQuitEvent): changes the login and quit messages and changes the players rank on join.
 * SignListener (SignChangeEvent): Allows user to write in color on signs.
 * ScoreBoard (PlayerJoinEvent): Displays a ScoreBoard
+* FlyListener (PlayerToggleFlightEvent): prevents player from flying without permissions.
 
 ## Chat Actions
 Chat Actions are simple Listeners, who react if you begin your message with a special key word. Example:
@@ -48,6 +46,7 @@ The following ChatActions are possible:
 * karatek.rank -> needed for `/rank`
 * karatek.silentjoin -> users with this permission don't have a join message and are automatically vanished.
 * karatek.crash -> needed for /crash
+* karatek.fly -> needed to fly
 
 ## Ranks
 These Ranks are Integreated:
