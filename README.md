@@ -1,10 +1,10 @@
 # KaratekCore
 
-![Version](https://img.shields.io/github/release-pre/KaratekHD/KaratekCore.svg?style=flat-square)
-![Spigot](https://img.shields.io/badge/Plugin-Spigot-yellow.svg?style=flat-square)
+![Version](https://img.shields.io/github/release-pre/KaratekHD/KaratekCore.svg)
+![Spigot](https://img.shields.io/badge/Plugin-Spigot-yellow.svg)
 
 KaratekCore is a Spigot Plugin, designed to run on the GamelMC Minecraft Server.
-At the moment, there isn't any way to configure it, but I'm working on it.
+At the moment, there isn't any way to configure it, but I'm working on it. If you have any issues, please write into the issues tab. If there are bugs, please have a look at [our Bug List](https://github.com/KaratekHD/KaratekCore/projects/2) abd if they aren't listed, please report in the issues tab as well.
 
 ## Commands
 At the moment, the following commands are working:
