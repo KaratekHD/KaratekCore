@@ -25,11 +25,16 @@ public class Command_Server implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+        //get player sender
         Player p = (Player) sender;
+        //check players permission
         if(!p.hasPermission("karatek.server")) {
             p.sendMessage(Main.pre + "Dir fehlt die Berrechtigung §akaratek.server§r.");
             return false;
-        } if(args.length > 1) {
+
+        }
+        //check syntax and send help
+        if(args.length > 1) {
             p.sendMessage("Verwendung: /server <server>");
             return false;
         }
@@ -37,6 +42,7 @@ public class Command_Server implements CommandExecutor {
             p.sendMessage("Verwendung: /server <server>");
             return false;
         }
+        //check for argument and teleport player
         if(args[0].equalsIgnoreCase("cb1")) {
             p.sendMessage(Main.loginprefix + " Verbinde zu Server ...");
             p.performCommand("mv tp PlotWorldNeu");
@@ -93,6 +99,7 @@ public class Command_Server implements CommandExecutor {
             return true;
         }
         else {
+            //if the "server" could'nt be found send mesages
             p.sendMessage(Main.loginprefix + " Verbinde zu Server ...");
             p.sendMessage(Main.loginprefix + " Konnte keine Verbindung zum Server herstellen. Wenn du dies für einen Fehler hälst, wende dich bitte an einen Administrator.");
             return false;

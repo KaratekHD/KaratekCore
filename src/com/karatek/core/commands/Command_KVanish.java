@@ -29,22 +29,32 @@ public class Command_KVanish implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
+        //get player
         Player p=(Player)sender;
+        //check players permission
         if(p.hasPermission("karatek.dev")) {
             if(args.length == 0) {
+                //unvanish player if he is vanished already
                 if(vanish.contains(p.getName())) {
+                    //remove player from arraylist
                     vanish.remove(p.getName());
+                    //send message
                     p.sendMessage(Main.karatekpre + " Du bist nun für alle Spieler sichtbar.");
+                    //get all online players
                     for(Player all : Bukkit.getOnlinePlayers()) {
-
+                        //unvanish sender
                         all.showPlayer(p);
 
                     }
                 } else {
+                    //vanish player by adding him to the ArrayList
                     vanish.add(p.getName());
+                    //get all players
                     for(Player all : Bukkit.getOnlinePlayers()) {
+                        //hide sender
                         all.hidePlayer(p);
                     }
+                    //send message
                     p.sendMessage(Main.karatekpre + " Du bist nun für alle Spieler unsichtbar.");
                 }
             } else if (args.length == 1){

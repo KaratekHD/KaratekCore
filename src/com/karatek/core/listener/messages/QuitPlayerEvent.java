@@ -1,4 +1,4 @@
-package com.karatek.core.listener;
+package com.karatek.core.listener.messages;
 
 /*
  * QuitPlayerEvent

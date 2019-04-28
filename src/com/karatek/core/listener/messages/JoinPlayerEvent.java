@@ -1,4 +1,4 @@
-package com.karatek.core.listener;
+package com.karatek.core.listener.messages;
 
 /*
  * JoinPlayerEvent
@@ -72,8 +72,10 @@ public class JoinPlayerEvent implements Listener {
         p.sendMessage(Main.loginprefix + " Daten wurden verarbeitet.");
         World w = p.getWorld();
         w.playSound(p.getLocation(), Sound.LEVEL_UP, 10, 1);
-        p.sendMessage(Main.pre + " Herzlich willkommen auf GamelMC!");
-
+        p.sendMessage(Main.pre + " Herzlich willkommen auf " + Main.name + "!");
+        if(Main.unstable) {
+            p.sendMessage(Main.pre + " §4Warnung:§r die verwendete Version von §4KaratekCore§r ist eine §4Entwicklerversion§r: §a" + Main.version);
+        }
 
     }
 }

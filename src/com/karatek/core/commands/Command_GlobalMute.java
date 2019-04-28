@@ -27,20 +27,25 @@ public class Command_GlobalMute implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String labels, String[] args) {
 
+        //check if sender is a player
         if(!(sender instanceof Player)) {
             sender.sendMessage(Main.pre + " Du musst ein Spieler sein.");
         } else {
 
+            //get player
             Player p = (Player)sender;
 
+            //check the players permissions
             if(!(p.hasPermission("karatek.globalmute"))) {
                 p.sendMessage(Main.pre + "Dir fehlt die Berechtigung §akaratek.globalmute§r.");
                 return true;
             }
+            //disable globalmute
             if(globalmute) {
                 globalmute = false;
                 Bukkit.broadcastMessage(Main.pre + "§r Der Globale Chat wurde von " + p.getDisplayName() + " §4aktiviert.");
             } else {
+                //enable globalmute
                 globalmute = true;
                 Bukkit.broadcastMessage(Main.pre + "§r Der Globale Chat wurde von " + p.getDisplayName() + " §4deaktiviert!");
             }

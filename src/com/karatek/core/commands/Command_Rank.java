@@ -24,16 +24,22 @@ public class Command_Rank implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+        //check if sender is a player
         if(!(sender instanceof Player)) {
             Bukkit.getConsoleSender().sendMessage("§r[§6§lGamelMC§r] Du musst ein Spieler sein.");
             return false;
         }
+        //get player sender
         Player p = (Player)sender;
+        //check for senders permission
         if(!p.hasPermission("karatek.rankadmin")) {
+            //send message
             p.sendMessage(Main.rankpre + " Dazu hast du keine Rechte. \n §4Dieser Vorgang wird gemeldet.§r");
+            //notify all team members
             Bukkit.broadcast("Der Spieler §a" + p.getName() + " §rhat versucht einen serverinternen Befehl auszuführen: §a/rank", "karatek.teamsee");
             return false;
         }
+        //check syntax and return help
         if(args.length < 2) {
             p.sendMessage(Main.rankpre + " §rVerwendung: /rank <Spieler> <Rang>");
             return false;
@@ -41,10 +47,12 @@ public class Command_Rank implements CommandExecutor {
             p.sendMessage(Main.rankpre + " §rVerwendung: /rank <Spieler> <Rang>");
             return false;
         }
+
         else {
+            //get target player
             Player target = Bukkit.getServer().getPlayer(args[0]);
-            p.sendMessage(Main.karatekpre + " Alles richtig! Spieler: §a" + target.getDisplayName() + "§r Rang:§a " + args[1]);
             p.sendMessage(Main.rankpre + " Suche in Rang Liste...");
+            //check for the argument and set the rank by executing setrank();
             if(args[1].equalsIgnoreCase("Owner")) {
                 setrank(p, target, args[1], "§4§lOwner");
             }
@@ -99,7 +107,9 @@ public class Command_Rank implements CommandExecutor {
     }
 
     public void setrank(Player sender, Player target, String rank, String msg) {
+        //change target group
         sender.performCommand("pex user " + target.getName() + " group set " + rank);
+        //send messages
         sender.sendMessage(Main.rankpre + " Der Rang von §a" + target.getName() + " §rist jetzt " + msg + "§r.");
         target.sendMessage(Main.rankpre + " Dein Rang wurde von " + sender.getDisplayName() + " §r geändert. Dein neuer Rang ist jetzt " + msg + "§r.");
 

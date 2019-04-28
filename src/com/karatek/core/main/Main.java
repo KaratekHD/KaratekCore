@@ -1,19 +1,49 @@
 package com.karatek.core.main;
 
+/*
+ * Main
+ *
+ * Version 0.2.2 RC 2
+ *
+ * Last Change: 0.2.2 RC 2
+ *
+ * Copyright Karatek_HD
+ *
+ * License free
+ */
+
 import com.karatek.core.commands.*;
 import com.karatek.core.listener.*;
+import com.karatek.core.listener.chat.*;
+import com.karatek.core.listener.messages.JoinPlayerEvent;
+import com.karatek.core.listener.messages.KickPlayerEvent;
+import com.karatek.core.listener.messages.QuitPlayerEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin {
+
+    private static Main plugin;
+
+    //create variables for all classes
+    public static boolean unstable = true;
     public static String version = "v0.2.2 RC 2";
-    public static String pre = "§r[§4§lKaratekCore§r]";
+    public static String name = "KaratekCore";
+    public static String pre = "§r[§4§l" + name +  "§r]";
     public static String karatekpre = "§r[§b§lENTWICKLERMODUS§r]";
     public static String rankpre = "§r[§4§lRangSystem§r]";
     public static String loginprefix = "§r[§2§lLogin§r]";
+
+
+
     public void onEnable() {
-        System.out.println("KaratekCore wurde aktiviert!");
+        plugin = this;
+
+        System.out.println("KaratekCore wurde erfolgreich aktiviert!");
+        if(unstable) {
+            System.out.println("Warnung: Diese Version des Plugins ist instabil.");
+        }
 
         //commands
         this.getCommand("test").setExecutor(new Command_Test());
@@ -27,17 +57,28 @@ public class Main extends JavaPlugin {
         this.getCommand("rank").setExecutor(new Command_Rank());
         this.getCommand("kversion").setExecutor(new Command_Version());
         this.getCommand("server").setExecutor(new Command_Server());
+        this.getCommand("troll").setExecutor(new Command_Troll());
 
         //get Plugin Manager
         PluginManager pm = Bukkit.getPluginManager();
-        pm.registerEvents(new PlayerChatEvent(), this);
-        pm.registerEvents(new Broadcast_Listener(), this);
+
+        //register listener
+        pm.registerEvents(new BroadcastListener(), this);
         pm.registerEvents(new JoinPlayerEvent(), this);
         pm.registerEvents(new KickPlayerEvent(), this);
         pm.registerEvents(new QuitPlayerEvent(), this);
         pm.registerEvents(new ScoreBoard(), this);
         pm.registerEvents(new SignListener(), this);
+        pm.registerEvents(new GlobalMuteListener(), this);
+        pm.registerEvents(new PrefixListener(), this);
+        pm.registerEvents(new TeamChatListener(), this);
+        pm.registerEvents(new UpperCaseListener(), this);
+        pm.registerEvents(new FlyListener(), this);
 
+    }
 
+    //getter
+    public static Main getPlugin() {
+        return plugin;
     }
 }

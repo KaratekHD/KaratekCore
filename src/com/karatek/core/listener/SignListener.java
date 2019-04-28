@@ -24,13 +24,20 @@ public class SignListener implements Listener {
 
     @EventHandler
     public void onChange(SignChangeEvent e)  {
+
+        //get Player
         Player p = e.getPlayer();
+
+        //check Permission
         if(p.hasPermission("karatek.colorsign")) {
+
+            //get Strings
             String l1 = e.getLine(0).replace("&", "§");
             String l2 = e.getLine(1).replace("&", "§");
             String l3 = e.getLine(2).replace("&", "§");
             String l4 = e.getLine(3).replace("&", "§");
 
+            //set Colour
             e.setLine(0, l1);
             e.setLine(1, l2);
             e.setLine(2, l3);

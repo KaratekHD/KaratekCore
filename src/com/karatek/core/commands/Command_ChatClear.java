@@ -24,17 +24,21 @@ public class Command_ChatClear implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+        //get player
         Player p = (Player) sender;
+        //check players permission
         if(!p.hasPermission("karatek.chatclear")) {
             p.sendMessage(Main.pre + " Dir fehlt die Berechtigung §akaratek.chatclear§r.");
         } else {
+            //get all players and clear the chat
             for (int i= 0; i < 105; ++i) {
                 for(Player all : Bukkit.getOnlinePlayers()) {
-                    if(!all.hasPermission("karatek.chatclear")) {
+                    if(!all.hasPermission("karatek.seechatclear")) {
                         all.sendMessage("");
                     }
                 }
             }
+            //send message
             Bukkit.broadcastMessage(Main.pre + " §7Der Chat wurde von §e" + p.getDisplayName() + "§7 geleert!");
         }
         return false;
