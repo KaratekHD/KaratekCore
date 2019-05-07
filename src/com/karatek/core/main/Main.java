@@ -21,19 +21,22 @@ import com.karatek.core.listener.messages.QuitPlayerEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
+import com.karatek.spigotlib.api.*;
 
 public class Main extends JavaPlugin {
 
     private static Main plugin;
 
     //create variables for all classes
-    public static boolean unstable = true;
-    public static String version = "v0.2.2 RC 2";
+    public static boolean unstable = false;
+    public static String version = "v0.2.2";
     public static String name = "KaratekCore";
     public static String pre = "§r[§4§l" + name +  "§r]";
     public static String karatekpre = "§r[§b§lENTWICKLERMODUS§r]";
     public static String rankpre = "§r[§4§lRangSystem§r]";
     public static String loginprefix = "§r[§2§lLogin§r]";
+    public static String author = "Karatek_HD";
+
 
 
 
@@ -54,10 +57,15 @@ public class Main extends JavaPlugin {
         this.getCommand("kopf").setExecutor(new Command_Kopf());
         this.getCommand("kvanish").setExecutor(new Command_KVanish());
         this.getCommand("kv").setExecutor(new Command_KVanish());
+        this.getCommand("kkick").setExecutor(new Command_Kick());
         this.getCommand("rank").setExecutor(new Command_Rank());
         this.getCommand("kversion").setExecutor(new Command_Version());
         this.getCommand("server").setExecutor(new Command_Server());
         this.getCommand("troll").setExecutor(new Command_Troll());
+        
+        if(unstable) {
+            this.getCommand("echo").setExecutor(new Command_Echo());
+        }
 
         //get Plugin Manager
         PluginManager pm = Bukkit.getPluginManager();
@@ -74,6 +82,7 @@ public class Main extends JavaPlugin {
         pm.registerEvents(new TeamChatListener(), this);
         pm.registerEvents(new UpperCaseListener(), this);
         pm.registerEvents(new FlyListener(), this);
+        pm.registerEvents(new PlayerSignListener(), this);
 
     }
 

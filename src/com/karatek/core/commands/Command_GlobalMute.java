@@ -37,7 +37,7 @@ public class Command_GlobalMute implements CommandExecutor {
 
             //check the players permissions
             if(!(p.hasPermission("karatek.globalmute"))) {
-                p.sendMessage(Main.pre + "Dir fehlt die Berechtigung §akaratek.globalmute§r.");
+                p.sendMessage("§c Dir fehlt die Berechtigung §akaratek.globalmute§c.");
                 return true;
             }
             //disable globalmute

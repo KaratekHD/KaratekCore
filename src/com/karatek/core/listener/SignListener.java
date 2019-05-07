@@ -23,10 +23,12 @@ import com.karatek.core.main.Main;
 public class SignListener implements Listener {
 
     @EventHandler
-    public void onChange(SignChangeEvent e)  {
+    public void onSign(SignChangeEvent e)  {
 
         //get Player
         Player p = e.getPlayer();
+
+
 
         //check Permission
         if(p.hasPermission("karatek.colorsign")) {

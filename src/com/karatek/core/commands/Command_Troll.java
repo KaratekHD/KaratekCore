@@ -22,7 +22,7 @@ public class Command_Troll implements CommandExecutor {
                 //check if target is online
                 if(t != null) {
                     //send troll packet
-                    t.sendBlockChange(p.getLocation(), Material.LAVA, (byte)0);
+                    t.sendBlockChange(t.getLocation(), Material.LAVA, (byte)0);
                 } else {
                     //send message
                     p.sendMessage("§rDer Spieler §a" + args[0] + " §rist nicht online!");
