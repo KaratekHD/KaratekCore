@@ -3,9 +3,9 @@ package com.karatek.core.main;
 /*
  * Main
  *
- * Version 0.2.2 RC 2
+ * Version 0.2.2 RC 3
  *
- * Last Change: 0.2.2 RC 2
+ * Last Change: 0.2.2 RC 3
  *
  * Copyright Karatek_HD
  *
@@ -28,8 +28,8 @@ public class Main extends JavaPlugin {
     private static Main plugin;
 
     //create variables for all classes
-    public static boolean unstable = false;
-    public static String version = "v0.2.2";
+    public static boolean unstable = true;
+    public static String version = "v0.2.2 RC 3";
     public static String name = "KaratekCore";
     public static String pre = "§r[§4§l" + name +  "§r]";
     public static String karatekpre = "§r[§b§lENTWICKLERMODUS§r]";

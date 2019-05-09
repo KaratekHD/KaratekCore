@@ -3,7 +3,7 @@ package com.karatek.core.listener;
 /*
  * ScoreBoard
  *
- * Version 0.2.2 RC 2
+ * Version 0.2.2 RC 3
  *
  * Last Change: 0.2.2 RC 2
  *

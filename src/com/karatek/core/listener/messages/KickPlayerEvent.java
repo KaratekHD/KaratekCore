@@ -1,5 +1,17 @@
 package com.karatek.core.listener.messages;
 
+/*
+ * KickPlayerEvent
+ *
+ * Version 0.2.2 RC 3
+ *
+ * Last Change: 0.2.2 RC 2
+ *
+ * Copyright Karatek_HD
+ *
+ * License free
+ */
+
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

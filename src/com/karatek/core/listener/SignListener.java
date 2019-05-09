@@ -7,7 +7,7 @@ import org.bukkit.entity.Player;
  *
  * Version 0.2.2 RC 2
  *
- * Last Change: 0.2.2 RC 2
+ * Last Change: 0.2.2 RC 3
  *
  * Copyright Karatek_HD
  *

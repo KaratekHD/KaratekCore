@@ -1,5 +1,17 @@
 package com.karatek.core.listener;
 
+/*
+ * PlayerSignListener
+ *
+ * Version 0.2.2 RC 3
+ *
+ * Last Change: 0.2.2 RC 3
+ *
+ * Copyright Karatek_HD
+ *
+ * License free
+ */
+
 import com.karatek.core.main.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.block.Sign;
@@ -12,13 +24,16 @@ import org.bukkit.inventory.ItemStack;
 
 public class PlayerSignListener implements Listener {
 
+    private static String line = "§4Klicken!";
+
     @EventHandler
     public void onInteract(PlayerInteractEvent e) {
 
         if(e.getClickedBlock().getState() instanceof Sign) {
             Sign s = (Sign) e.getClickedBlock().getState();
 
-            if(s.getLine(0).equalsIgnoreCase("Hier klicken!")) {
+
+            if(s.getLine(0).equalsIgnoreCase(line)) {
                 int slots = 27;
 
                 try{
@@ -66,7 +81,7 @@ public class PlayerSignListener implements Listener {
     public void onSign(SignChangeEvent e){
         if(e.getLine(0).equalsIgnoreCase("ess")){
             if(e.getPlayer().hasPermission("karatek.createsign")) {
-                e.setLine(0, "Hier klicken!");
+                e.setLine(0, line);
 
             } else {
                 e.getPlayer().sendMessage("§cDazu hast du keine Rechte!");

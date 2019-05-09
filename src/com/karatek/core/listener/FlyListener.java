@@ -1,5 +1,17 @@
 package com.karatek.core.listener;
 
+/*
+ * JoinPlayerEvent
+ *
+ * Version 0.2.2 RC 3
+ *
+ * Last Change: 0.2.2 RC 2
+ *
+ * Copyright Karatek_HD
+ *
+ * License free
+ */
+
 import com.karatek.core.main.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
